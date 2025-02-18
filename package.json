@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve --liveReload"
+    "dev": "webpack serve"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
