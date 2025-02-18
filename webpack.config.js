@@ -10,8 +10,17 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, 'public', 'index.html')
+            template: path.resolve(__dirname, 'public', 'index.html'),
         }),
         new CleanWebpackPlugin()
-    ]
+    ],
+    module: {
+        rules: [
+            { 
+              test: /\.js$/,
+              exclude: /node_modules/,
+              use: 'babel-loader'
+            }
+        ],
+    }
 };
