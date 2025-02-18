@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Header(props){
     return(
@@ -10,3 +11,12 @@ function Header(props){
 }
 
 export default Header;
+
+Header.propTypes = {
+    title: PropTypes.string.isRequired,
+    children: PropTypes.node
+}
+
+Header.defaultProps = {
+    title: `JStack's Blog`
+}
